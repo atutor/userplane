@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?> 
+<?xml version="1.0" encoding="ISO-8859-1"?> 
 <module version="0.1"> 
-    <name lang="en">UserPlane</name> 
-    <description lang="en">This modules links the Userplane Web Chat into ATutor</description> 
+    <name lang="en">Userplane</name> 
+    <description lang="en">This module is the updated version of Userplane module. It includes Buddy Chat, Chat Rooms, Group Chat.</description> 
     <maintainers>
         <maintainer> 
             <name>ATutor Team</name> 
@@ -11,9 +11,9 @@
     <url>http://atutor.ca</url> 
     <license>BSD</license> 
 	<release> 
-        <version>0.4</version> 
-        <date>2010-10-25</date> 
+        <version>1.3</version> 
+        <date>2013-28-02</date> 
         <state>stable</state> 
-	<notes>You will need to create a Userplane account at http://www.userplane.com/buy/index.cfm, then through the administrator's UserPlane manager, enter that ID into the UserPlane ID field.  </notes> 
+        <notes>Follow the steps in Readme to install and configure Userplane module.</notes> 
     </release> 
 </module>

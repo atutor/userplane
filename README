@@ -1,6 +1,12 @@
 Userplane WebChat for ATutor ReadMe
 
-This module can be installed with ATutor to add live text, audio, and video chat to ATutor courses. Each course on an ATutor system is provided with its own Webchat.
+This is an enhanced version of the Userplane module. It also supports the previous Userplane module.
+Salient features of the new module:
+Buddy List - Shows a list of online/offline friends in each course on an ATutor system.
+Notification Area - Manage all notifications like offline messages, friending/blocking activity etc with ease.
+Group Chat - Now creates a private room for groups in each course.
+
+The old module can still be installed with ATutor to add live text, audio, and video chat to ATutor courses.
 Import Install
 1. Select the UserPlane module from those listed in the ATutor Module Manager's Import Module utility.
 
@@ -18,12 +24,33 @@ tar xzvf atutor_userplane.tar.gz
 
 2. Login to ATutor as the administrator and run Install Module under the Modules tab, Select the Userplane module, which should be listed as available to be installed when the module has been unzipped into the modes directory
 
-3. Setup your Userplane community. You may set up your own private community by visiting the Userplane registration site
+3.  Confgure SITE ID and API Key -
+    a) Create an account on Userplane if you don't have one : http://www.userplane.com/signup/
+    b) Fill in the basic details and in the website field provide the url to ATutor system. For example if my Atutor system url is : http://abhinavkops.comyr.com/mancoolgunda/ATutor then the website would be http://abhinavkops.comyr.com/mancoolgunda/
+    c) On clicking Sign Up, you will get a mail which enables you to active your Userplane account.
+    d) On clicking the link in the email, you need to provide a password after which you will be redirected to "https://dashboard.userplane.com/install"
+    e) Click on Configure tab on the right corner.
+    f) Make sure you do not see any errors.
+    g) Copy the SITE ID and API KEY and paste it into the respective fields on the administrator's Userplane tab.
 
-https://www.userplane.com/buy/
+4.  Setup your Userplane community. You may set up your own private community by visiting the Userplane registration site
+    https://www.userplane.com/buy/
 
-You may choose to use the Free version of Userplane when you register, in which case advertisements will be displayed when the WebChat opens, or you can purchase a community ID which will remove the advertisements.
+    This Community would be used as the "General Discussion Room" and is available outside any course.
 
-You may also choose to use the ATutor community ID, and access the already established atutor.ca Userplane community. This is an advertised version of Userplane, which also includes direct access to ATutor support. The ATutor Community ID is ( e2405db9bcd4f802ffed98a4d1a15ac3 )
+    You may choose to use the Free version of Userplane when you register, in which case advertisements will be displayed when the WebChat opens, or you can purchase a community ID which will remove the advertisements.
 
-4. Once you have your community ID, and the module has been installed, and enabled, click on the administrator's Userplane Tab to enter the community ID. Once the ID has been saved Userplan is ready to go. 
+    You may also choose to use the ATutor community ID, and access the already established atutor.ca Userplane community. This is an advertised version of Userplane, which also includes direct access to ATutor support. The ATutor Community ID is ( e2405db9bcd4f802ffed98a4d1a15ac3 )
+
+4. Once you have your SITE ID, API Key and community ID, and the module has been installed, and enabled click Save and Userplan is ready to go. 
+
+General Instructions about the Module:
+
+All users( instructors, students) can access the General Discussion room which can be viewed by clicking on the Userplane tab outside any course.
+
+Inside any course, three tabs are available. 
+
+The first tab provides a discussion room for the current course.
+The second tab allows users to use the previous Userplane module.
+The third tab provides "Group Chat". Any student can join the Group Chat Room and discuss with other members of the group.
+

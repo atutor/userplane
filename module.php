@@ -12,7 +12,7 @@ if (!isset($this) || (isset($this) && (strtolower(get_class($this)) != 'module')
 /*******
  * assign the instructor and admin privileges to the constants.
  */
-
+define('AT_PRIV_USERPLANE',       $this->getPrivilege());
 define('AT_ADMIN_PRIV_USERPLANE', $this->getAdminPrivilege());
 
 /*******
@@ -26,7 +26,7 @@ $this->_stacks['userplane'] = array('title_var'=>'userplane', 'file'=>AT_INCLUDE
 $_student_tool = 'mods/userplane/index.php';
 
 /*******
- * add the admin page so the Userplane ID can be managed
+ * add the admin pages when needed.
  */
 
 if (admin_authenticate(AT_ADMIN_PRIV_USERPLANE, TRUE) || admin_authenticate(AT_ADMIN_PRIV_ADMIN, TRUE)) {
@@ -36,12 +36,33 @@ if (admin_authenticate(AT_ADMIN_PRIV_USERPLANE, TRUE) || admin_authenticate(AT_A
 }
 
 /*******
+ * instructor Manage section:
+ */
+$this->_pages['mods/userplane/index_instructor.php']['title_var'] = 'userplane';
+$this->_pages['mods/userplane/index_instructor.php']['parent']   = 'tools/index.php';
+
+/*******
  * student page.
  */
 $this->_pages['mods/userplane/index.php']['title_var'] = 'userplane';
 $this->_pages['mods/userplane/index.php']['img']       = 'mods/userplane/userplane.jpg';
+$this->_pages['mods/userplane/index.php']['children'] = array('mods/userplane/old_course.php','mods/userplane/group_chat.php');
 
-// You may use the ATutor community ID (e2405db9bcd4f802ffed98a4d1a15ac3) but you should register your own
-// at http://www.userplane.com/buy/index.cfm
+$this->_pages['mods/userplane/old_course.php']['title_var'] = 'up_old';
+$this->_pages['mods/userplane/old_course.php']['parent'] = 'mods/userplane/index.php';
+
+$this->_pages['mods/userplane/group_chat.php']['title_var'] = 'up_group_chat';
+$this->_pages['mods/userplane/group_chat.php']['parent'] = 'mods/userplane/index.php';
+
+
+/* my start page pages */
+$this->_pages[AT_NAV_START]  = array('mods/userplane/index_mystart.php');
+$this->_pages['mods/userplane/index_mystart.php']['title_var'] = 'userplane';
+$this->_pages['mods/userplane/index_mystart.php']['parent'] = AT_NAV_START;
+
+$this->_pages['mods/userplane/index_mystart.php']['children'] = array('mods/userplane/old.php');
+$this->_pages['mods/userplane/old.php']['title_var'] = 'up_old';
+$this->_pages['mods/userplane/old.php']['parent'] = 'mods/userplane/index_mystart.php';
+
 
 ?>
